@@ -1,0 +1,12 @@
+--- build/nginx-1.6.0/debian/changelog	2014-04-27 13:30:36.000000000 +0000
++++ build/nginx-1.6.0/debian/changelog.new	2014-04-27 13:31:01.000000000 +0000
+@@ -1,7 +1,8 @@
+-nginx (1.6.0-1~precise) precise; urgency=low
++nginx (1.6.0-1~precise-tizaro) precise; urgency=low
+ 
+   * 1.6.0
+   * http-auth-request module added
++  * ngx_small_light module added
+ 
+  -- Konstantin Pavlov <thresh@nginx.com>  Thu, 24 Apr 2014 17:12:40 +0400
+ 

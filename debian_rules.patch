@@ -1,0 +1,28 @@
+--- build/nginx-1.6.0/debian/rules	2014-04-24 13:44:34.000000000 +0000
++++ build/nginx-1.6.0/debian/rules.new	2014-04-27 13:20:52.000000000 +0000
+@@ -6,6 +6,7 @@
+ WITH_SPDY := $(shell printf "Source: nginx\nBuild-Depends: libssl-dev (>= 1.0.1)\n" | \
+ 	dpkg-checkbuilddeps - >/dev/null 2>&1 && \
+ 	echo "--with-http_spdy_module")
++MODULESDIR = $(CURDIR)/debian/modules
+ 
+ %:
+ 	dh $@ 
+@@ -52,7 +53,8 @@
+ 		$(WITH_SPDY) \
+ 		--with-cc-opt="$(CFLAGS)" \
+ 		--with-ld-opt="$(LDFLAGS)" \
+-		--with-ipv6
++		--with-ipv6 \
++		--add-module=$(MODULESDIR)/ngx_small_light-0.5.2
+ 	dh_auto_build
+ 
+ configure_debug:
+@@ -91,6 +93,7 @@
+ 		--with-cc-opt="$(CFLAGS)" \
+ 		--with-ld-opt="$(LDFLAGS)" \
+ 		--with-ipv6 \
++		--add-module=$(MODULESDIR)/ngx_small_light-0.5.2 \
+ 		--with-debug
+ 
+ override_dh_auto_install:
