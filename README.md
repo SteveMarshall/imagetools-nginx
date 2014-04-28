@@ -26,7 +26,7 @@ To build the nginx package:
 
 ```bash
 vagrant up                             # Create the VM
-vagrant ssh -c "cd /vagrant && make"   # Log into the VM and build the package
+vagrant ssh -c "cd /vagrant && make"   # Log in to the VM and build the package
 ```
 
 After this is complete, the `build` directory will contain two nginx
