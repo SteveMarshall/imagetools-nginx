@@ -1,8 +1,9 @@
 --- /Users/Steven/Development/Work/nginx.deb/build/nginx-1.6.0/debian/changelog	2014-04-24 14:44:43.000000000 +0100
 +++ /Users/Steven/Development/Work/nginx.deb/build/nginx-1.6.0/debian/changelog.new	2014-04-27 19:28:36.000000000 +0100
-@@ -1,3 +1,9 @@
+@@ -1,3 +1,10 @@
 +nginx (1.6.0-1~precise+tizaro) precise; urgency=low
 +
++  * http_image_filter_module module enabled
 +  * ngx_small_light module added
 +
 + -- Steve Marshall <steve@tizaro.com>  Sun, 27 Apr 2014 19:00:00 +0000

@@ -16,6 +16,12 @@ exec { 'apt-builddep-nginx':
   require   => Apt::Source['nginx'],
 }
 
+# ngx_ngx_small_light depends on libmagickwand
 package { 'libmagickwand-dev':
+  require => Exec['apt_update']
+}
+
+# Built-in http_image_filter_module depends on GD2
+package { 'libgd2-xpm-dev':
   require => Exec['apt_update']
 }

@@ -8,20 +8,22 @@
  
  %:
  	dh $@ 
-@@ -52,7 +53,8 @@
+@@ -52,7 +53,9 @@
  		$(WITH_SPDY) \
  		--with-cc-opt="$(CFLAGS)" \
  		--with-ld-opt="$(LDFLAGS)" \
 -		--with-ipv6
 +		--with-ipv6 \
++		--with-http_image_filter_module \
 +		--add-module=$(MODULESDIR)/ngx_small_light-0.5.2
  	dh_auto_build
  
  configure_debug:
-@@ -91,6 +93,7 @@
+@@ -91,6 +93,8 @@
  		--with-cc-opt="$(CFLAGS)" \
  		--with-ld-opt="$(LDFLAGS)" \
  		--with-ipv6 \
++		--with-http_image_filter_module \
 +		--add-module=$(MODULESDIR)/ngx_small_light-0.5.2 \
  		--with-debug
  
