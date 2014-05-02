@@ -1,5 +1,5 @@
 NGINX_FULL_VERSION  = 1.6.0-1~precise
-NGINX_CUSTOM_VERSION = $(NGINX_FULL_VERSION)+tizaro
+NGINX_CUSTOM_VERSION = $(NGINX_FULL_VERSION)+tizaro.1
 NGINX_VERSION       = 1.6.0
 SMALL_LIGHT_VERSION = 0.5.2
 NGINX_SRC           = build/nginx-$(NGINX_VERSION)
@@ -29,7 +29,7 @@ $(MODULES_DIR): $(NGINX_SRC)
 	mkdir -p $(MODULES_DIR)
 
 $(SMALL_LIGHT_SRC)/config: $(SMALL_LIGHT_SRC)
-	cd $(SMALL_LIGHT_SRC) && ./setup
+	cd $(SMALL_LIGHT_SRC) && ./setup  --with-gd
 
 $(SMALL_LIGHT_SRC): $(MODULES_DIR)
 	cd $(MODULES_DIR) \
