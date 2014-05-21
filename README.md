@@ -1,6 +1,6 @@
-# Tizaro-nginx
+# imagetools-nginx
 
-Tools to build a custom nginx package that meets Tizaro's needs.
+Tools to build a custom nginx package with image processing tools built in.
 
 The output of this tool has these differences to the [stable nginx.org
 package](http://nginx.org/en/linux_packages.html#stable):
@@ -8,7 +8,7 @@ package](http://nginx.org/en/linux_packages.html#stable):
 - [ngx_http_image_filter](http://nginx.org/en/docs/http/ngx_http_image_filter_module.html) support
 - [ngx_small_light](https://github.com/cubicdaiya/ngx_small_light) support
 
-## Installing Tizaro's custom nginx
+## Installing this version of nginx
 
 Copy an appropriate [release](#TODO) locally, and install it
 with `dpkg -i <filename>`.
